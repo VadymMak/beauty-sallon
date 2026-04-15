@@ -1,5 +1,5 @@
 // Palette presets
-export type PalettePreset = 'dark-premium' | 'clean-light' | 'warm-cozy' | 'professional' | 'natural' | 'medical';
+export type PalettePreset = 'dark-premium' | 'clean-light' | 'warm-cozy' | 'warm' | 'professional' | 'natural' | 'medical';
 
 export interface PaletteColors {
   primary: string;

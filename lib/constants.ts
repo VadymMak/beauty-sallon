@@ -17,15 +17,15 @@ import type {
 export const USE_LOCAL_IMAGES = false;
 
 // ---------------------------------------------------------------------------
-// IMAGES
+// IMAGES — beauty salon (Unsplash CDN)
 // ---------------------------------------------------------------------------
 export const IMAGES: ImageMap = {
   hero: USE_LOCAL_IMAGES
     ? '/images/hero.webp'
-    : 'https://images.unsplash.com/photo-1625047509252-ab38fb5c7343?w=1600&q=80',
+    : 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80',
   about: USE_LOCAL_IMAGES
     ? '/images/about.webp'
-    : 'https://images.unsplash.com/photo-1606577924006-27d39b132ae2?w=800&q=80',
+    : 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80',
   gallery: USE_LOCAL_IMAGES
     ? [
         '/images/gallery/01.webp',
@@ -35,11 +35,11 @@ export const IMAGES: ImageMap = {
         '/images/gallery/05.webp',
       ]
     : [
-        'https://images.unsplash.com/photo-1586768702658-caf8a84e8b8e?w=800&q=80',
-        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-        'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
-        'https://images.unsplash.com/photo-1611566026373-c6c8da0ea861?w=800&q=80',
-        'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80',
+        'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80',
+        'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80',
+        'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80',
+        'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
       ],
 };
 
@@ -47,23 +47,23 @@ export const IMAGES: ImageMap = {
 // NAVIGATION
 // ---------------------------------------------------------------------------
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Domov', href: '#hero' },
-  { label: 'Služby', href: '#services' },
-  { label: 'Prečo my', href: '#why-us' },
-  { label: 'Galéria', href: '#gallery' },
-  { label: 'Recenzie', href: '#reviews' },
-  { label: 'Rezervácia', href: '#booking' },
-  { label: 'Kontakt', href: '#contact' },
+  { label: 'Головна', href: '#hero' },
+  { label: 'Послуги', href: '#services' },
+  { label: 'Переваги', href: '#why-us' },
+  { label: 'Галерея', href: '#gallery' },
+  { label: 'Відгуки', href: '#reviews' },
+  { label: 'Запис', href: '#booking' },
+  { label: 'Контакти', href: '#contact' },
 ];
 
 // ---------------------------------------------------------------------------
 // STATS
 // ---------------------------------------------------------------------------
 export const STATS: StatItem[] = [
-  { value: '15+', label: 'Rokov skúseností' },
-  { value: '5000+', label: 'Spokojných zákazníkov' },
-  { value: '98%', label: 'Spokojnosť' },
-  { value: '24h', label: 'Expresné opravy' },
+  { value: '10+', label: 'Років досвіду' },
+  { value: '5000+', label: 'Задоволених клієнтів' },
+  { value: '15', label: 'Майстрів' },
+  { value: '4', label: 'Напрями послуг' },
 ];
 
 // ---------------------------------------------------------------------------
@@ -72,176 +72,181 @@ export const STATS: StatItem[] = [
 export const WHY_ITEMS: WhyItem[] = [
   {
     id: '1',
-    icon: '🔧',
-    title: 'Skúsení mechanici',
-    description: 'Certifikovaní odborníci s dlhoročnou praxou na všetkých značkách vozidiel.',
+    icon: '💆',
+    title: 'Досвідчені майстри',
+    description: 'Кожен майстер — сертифікований спеціаліст з багаторічним досвідом. Ми постійно навчаємось та вдосконалюємо свої навички.',
   },
   {
     id: '2',
-    icon: '⚡',
-    title: 'Rýchly servis',
-    description: 'Väčšinu opráv zvládneme do 24 hodín. Expresné opravy na počkanie.',
+    icon: '🌿',
+    title: 'Якісна косметика',
+    description: 'Використовуємо тільки перевірені бренди: Wella, L\'Oréal, OPI. Безпечно для волосся та нігтів.',
   },
   {
     id: '3',
-    icon: '💰',
-    title: 'Férové ceny',
-    description: 'Transparentná cenová politika bez skrytých poplatkov. Cenová ponuka zadarmo.',
+    icon: '💖',
+    title: 'Індивідуальний підхід',
+    description: 'Кожен клієнт отримує персональну консультацію. Ми підберемо саме те, що підкреслить вашу красу.',
   },
   {
     id: '4',
-    icon: '🛡️',
-    title: 'Záruka na prácu',
-    description: 'Na všetky opravy poskytujeme 12-mesačnú záruku. Vaša spokojnosť je priorita.',
+    icon: '📅',
+    title: 'Зручний запис',
+    description: 'Записуйтесь онлайн у будь-який час. Нагадуємо про візит за годину через WhatsApp.',
   },
 ];
 
 // ---------------------------------------------------------------------------
-// SERVICE CATEGORIES (templateType: 'services')
+// SERVICE CATEGORIES — beauty salon
 // ---------------------------------------------------------------------------
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
-    id: 'diagnostics',
-    name: 'Diagnostika',
+    id: 'haircut',
+    name: '✂️ Стрижки',
     items: [
       {
-        id: 'd1',
-        name: 'Počítačová diagnostika',
-        description: 'Kompletná diagnostika elektroniky vozidla',
-        price: 'od 30 €',
-        icon: '💻',
+        id: 'h1',
+        name: 'Жіноча стрижка',
+        description: 'Стрижка будь-якої складності з укладкою та консультацією стиліста',
+        price: 'від 1000 грн',
+        icon: '✂️',
       },
       {
-        id: 'd2',
-        name: 'Geometria kolies',
-        description: 'Nastavenie geometrie náprav pomocou 3D zariadenia',
-        price: 'od 40 €',
-        icon: '📐',
+        id: 'h2',
+        name: 'Чоловіча стрижка',
+        description: 'Класична або творча стрижка, гоління бороди',
+        price: 'від 350 грн',
+        icon: '💈',
       },
       {
-        id: 'd3',
-        name: 'Kontrola pred kúpou',
-        description: 'Detailná prehliadka vozidla pred nákupom',
-        price: 'od 60 €',
-        icon: '🔍',
+        id: 'h3',
+        name: 'Дитяча стрижка',
+        description: 'Акуратна стрижка для дітей до 12 років',
+        price: 'від 250 грн',
+        icon: '👶',
+      },
+      {
+        id: 'h4',
+        name: 'Укладка волосся',
+        description: 'Повсякденна або святкова укладка: локони, пряме, об\'єм',
+        price: 'від 400 грн',
+        icon: '💨',
       },
     ],
   },
   {
-    id: 'repairs',
-    name: 'Opravy',
+    id: 'coloring',
+    name: '🎨 Фарбування',
     items: [
       {
-        id: 'r1',
-        name: 'Oprava motora',
-        description: 'Generálna oprava, výmena tesnenia, remont',
-        price: 'od 200 €',
-        icon: '🔩',
+        id: 'c1',
+        name: 'Повне фарбування',
+        description: 'Однотонне фарбування всього волосся преміальними фарбами',
+        price: 'від 3500 грн',
+        icon: '🎨',
       },
       {
-        id: 'r2',
-        name: 'Oprava prevodovky',
-        description: 'Manuálne aj automatické prevodovky',
-        price: 'od 150 €',
-        icon: '⚙️',
+        id: 'c2',
+        name: 'Мелірування',
+        description: 'Класичне, балаяж або омбре — на вибір',
+        price: 'від 2500 грн',
+        icon: '✨',
       },
       {
-        id: 'r3',
-        name: 'Oprava bŕzd',
-        description: 'Výmena platničiek, diskov, brzdových strmeňov',
-        price: 'od 50 €',
-        icon: '🛑',
+        id: 'c3',
+        name: 'Тонування',
+        description: 'Освіження кольору, усунення жовтизни, пастельні відтінки',
+        price: 'від 1500 грн',
+        icon: '🌈',
+      },
+      {
+        id: 'c4',
+        name: 'Кератинове випрямлення',
+        description: 'Відновлення, розгладження та зволоження волосся на 4–6 місяців',
+        price: 'від 2000 грн',
+        icon: '💎',
       },
     ],
   },
   {
-    id: 'maintenance',
-    name: 'Údržba',
+    id: 'manicure',
+    name: '💅 Манікюр',
     items: [
       {
         id: 'm1',
-        name: 'Výmena oleja',
-        description: 'Motorový olej + filter, reset servisného intervalu',
-        price: 'od 35 €',
-        icon: '🛢️',
+        name: 'Класичний манікюр',
+        description: 'Обробка кутикули, форма нігтів, покриття звичайним лаком',
+        price: 'від 350 грн',
+        icon: '💅',
       },
       {
         id: 'm2',
-        name: 'Výmena pneumatík',
-        description: 'Prezutie, vyváženie, uskladnenie pneumatík',
-        price: 'od 10 €/kus',
-        icon: '🔄',
+        name: 'Манікюр гель-лак',
+        description: 'Довговічне покриття гель-лаком, тримається 2–3 тижні',
+        price: 'від 500 грн',
+        icon: '💎',
       },
       {
         id: 'm3',
-        name: 'Klimatizácia',
-        description: 'Plnenie, dezinfekcia, oprava klimatizácie',
-        price: 'od 45 €',
-        icon: '❄️',
+        name: 'Нарощування нігтів',
+        description: 'Акрил або гель — будь-яка форма та дизайн',
+        price: 'від 800 грн',
+        icon: '✨',
+      },
+      {
+        id: 'm4',
+        name: 'Педикюр',
+        description: 'Апаратний або класичний педикюр з покриттям',
+        price: 'від 600 грн',
+        icon: '🦶',
+      },
+    ],
+  },
+  {
+    id: 'massage',
+    name: '💆 Масаж',
+    items: [
+      {
+        id: 'ms1',
+        name: 'Класичний масаж',
+        description: 'Загально-розслаблюючий масаж тіла, 60 хвилин',
+        price: 'від 1500 грн',
+        icon: '💆',
+      },
+      {
+        id: 'ms2',
+        name: 'Антицелюлітний масаж',
+        description: 'Інтенсивний масаж проблемних зон, курс 10 сеансів',
+        price: 'від 1800 грн',
+        icon: '🌊',
+      },
+      {
+        id: 'ms3',
+        name: 'Масаж обличчя',
+        description: 'Ліфтинг, лімфодренаж, бакко-масаж, 45 хвилин',
+        price: 'від 800 грн',
+        icon: '🌸',
+      },
+      {
+        id: 'ms4',
+        name: 'Масаж голови',
+        description: 'Розслаблюючий масаж голови та шийно-комірцевої зони',
+        price: 'від 500 грн',
+        icon: '🧠',
       },
     ],
   },
 ];
 
 // ---------------------------------------------------------------------------
-// SCHEDULE (templateType: 'schedule')
+// SCHEDULE (templateType: 'schedule') — not used for this site
 // ---------------------------------------------------------------------------
-export const SCHEDULE: DaySchedule[] = [
-  {
-    day: 'Pondelok',
-    entries: [
-      { time: '08:00', name: 'Ranný servis', instructor: 'Martin K.' },
-      { time: '10:00', name: 'Diagnostika', instructor: 'Jozef P.' },
-      { time: '14:00', name: 'Odpoludňajší servis', instructor: 'Martin K.' },
-    ],
-  },
-  {
-    day: 'Utorok',
-    entries: [
-      { time: '08:00', name: 'Oprava bŕzd', instructor: 'Jozef P.' },
-      { time: '11:00', name: 'Výmena oleja', instructor: 'Peter S.' },
-      { time: '15:00', name: 'Geometria', instructor: 'Martin K.' },
-    ],
-  },
-  {
-    day: 'Streda',
-    entries: [
-      { time: '08:00', name: 'Ranný servis', instructor: 'Peter S.' },
-      { time: '12:00', name: 'Klimatizácia', instructor: 'Jozef P.' },
-      { time: '16:00', name: 'Expresný servis', instructor: 'Martin K.' },
-    ],
-  },
-];
+export const SCHEDULE: DaySchedule[] = [];
 
 // ---------------------------------------------------------------------------
-// MENU CATEGORIES (templateType: 'menu')
+// MENU CATEGORIES (templateType: 'menu') — not used for this site
 // ---------------------------------------------------------------------------
-export const MENU_CATEGORIES: MenuCategory[] = [
-  {
-    id: 'starters',
-    name: 'Predjedlá',
-    items: [
-      { id: 's1', name: 'Cesnaková polievka', description: 'Tradičná slovenská cesnaková polievka s krutónmi', price: '4,50 €' },
-      { id: 's2', name: 'Šalát Caesar', description: 'Rímsky šalát, parmezán, krutóny, Caesar dresing', price: '6,90 €' },
-    ],
-  },
-  {
-    id: 'mains',
-    name: 'Hlavné jedlá',
-    items: [
-      { id: 'm1', name: 'Svíčková na smotane', description: 'Hovädzí sviečok, smotanová omáčka, knedľa', price: '13,90 €' },
-      { id: 'm2', name: 'Grilovaný losos', description: 'Atlantický losos, zelenina, citronové maslo', price: '15,50 €' },
-    ],
-  },
-  {
-    id: 'drinks',
-    name: 'Nápoje',
-    items: [
-      { id: 'd1', name: 'Domáca limonáda', description: 'Čerstvá limonáda s mätou alebo jahodami', price: '3,20 €' },
-      { id: 'd2', name: 'Espresso', description: 'Dvojitý taliansky espresso', price: '1,80 €' },
-    ],
-  },
-];
+export const MENU_CATEGORIES: MenuCategory[] = [];
 
 // ---------------------------------------------------------------------------
 // REVIEWS
@@ -249,35 +254,35 @@ export const MENU_CATEGORIES: MenuCategory[] = [
 export const REVIEWS: Review[] = [
   {
     id: '1',
-    name: 'Michal Horváth',
-    initial: 'M',
-    text: 'Skvelý servis! Auto opravili za jeden deň a cena bola veľmi férová. Určite sa vrátim.',
+    name: 'Олена Ткаченко',
+    initial: 'О',
+    text: 'Чудовий салон! Зробила мелірування — результат просто казковий. Майстер уважно вислухала побажання і зробила саме те, про що я мріяла. Всім рекомендую!',
     rating: 5,
-    detail: 'Výmena spojky, Škoda Octavia',
+    detail: 'Балаяж, середня довжина',
   },
   {
     id: '2',
-    name: 'Jana Kováčová',
-    initial: 'J',
-    text: 'Profesionálny prístup, priateľský personál. Diagnostiku urobili rýchlo a presne. Odporúčam!',
+    name: 'Марина Петрова',
+    initial: 'М',
+    text: 'Ходжу сюди вже два роки. Манікюр тримається три тижні! Дівчата — справжні професіонали, завжди привітні і уважні до деталей.',
     rating: 5,
-    detail: 'Diagnostika, Volkswagen Golf',
+    detail: 'Манікюр гель-лак',
   },
   {
     id: '3',
-    name: 'Tomáš Novák',
-    initial: 'T',
-    text: 'Prezutie pneumatík vykonali za 30 minút. Cena rozumná, práca kvalitná. Budem chodiť pravidelne.',
+    name: 'Юлія Коваль',
+    initial: 'Ю',
+    text: 'Пройшла курс антицелюлітного масажу 10 сеансів — результат відчутний! Майстер дуже кваліфікована, пояснює кожен крок. Приємна атмосфера в салоні.',
     rating: 5,
-    detail: 'Výmena pneumatík, BMW 3',
+    detail: 'Антицелюлітний масаж, курс',
   },
   {
     id: '4',
-    name: 'Lucia Szabóová',
-    initial: 'L',
-    text: 'Kontrola pred kúpou ojazdenia mi ušetrila veľa starostí. Odhalili skryté závady. Ďakujem!',
+    name: 'Тетяна Мороз',
+    initial: 'Т',
+    text: 'Нарешті знайшла майстра, який зрозумів, чого я хочу! Стрижка і укладка вийшли бездоганно. Ціни адекватні якості. Буду постійним клієнтом.',
     rating: 5,
-    detail: 'Kontrola pred kúpou, Toyota Corolla',
+    detail: 'Жіноча стрижка + укладка',
   },
 ];
 
@@ -287,23 +292,23 @@ export const REVIEWS: Review[] = [
 export const CONTACT_ITEMS: ContactItem[] = [
   {
     icon: '📍',
-    title: 'Adresa',
-    lines: ['Priemyselná 15', '010 01 Žilina'],
+    title: 'Адреса',
+    lines: ['вул. Короленка', 'м. Дніпро (Дніпропетровськ)'],
   },
   {
     icon: '📞',
-    title: 'Telefón',
-    lines: ['+421 32 123 4567', '+421 903 456 789'],
+    title: 'Телефон / WhatsApp',
+    lines: ['+38 093 804 7808'],
   },
   {
     icon: '✉️',
     title: 'Email',
-    lines: ['info@autofix.sk', 'servis@autofix.sk'],
+    lines: ['oksana1492@i.ua'],
   },
   {
     icon: '🕐',
-    title: 'Otváracie hodiny',
-    lines: ['Po–Pia: 07:30–17:30', 'So: 08:00–12:00'],
+    title: 'Години роботи',
+    lines: ['Пн–Пт: 08:00–21:00', 'Сб–Нд: 10:00–18:00'],
   },
 ];
 
@@ -313,33 +318,39 @@ export const CONTACT_ITEMS: ContactItem[] = [
 export const FAQ_ITEMS: FaqItem[] = [
   {
     id: '1',
-    question: 'Ako dlho trvá bežná oprava?',
+    question: 'Як записатися на прийом?',
     answer:
-      'Väčšina bežných opráv (výmena oleja, bŕzd, pneumatík) sa vykonáva do 1–2 hodín. Väčšie opravy motora alebo prevodovky môžu trvať 1–3 dni. Presný čas vám povieme pri prevzatí vozidla.',
+      'Записатися можна через онлайн-форму на цій сторінці, написавши нам у WhatsApp (+38 093 804 7808) або надіславши email на oksana1492@i.ua. Ми відповімо протягом 15 хвилин у робочий час.',
   },
   {
     id: '2',
-    question: 'Poskytujete náhradné vozidlo počas opravy?',
+    question: 'Скільки коштують ваші послуги?',
     answer:
-      'Áno, pri opravách trvajúcich dlhšie ako 1 deň vám poskytneme náhradné vozidlo zdarma. Stačí si to dopredu rezervovať.',
+      'Стрижка — від 1000 грн, фарбування — від 3500 грн, манікюр — від 350 грн, масаж — від 1500 грн. Точну вартість майстер назве на консультації, залежно від довжини волосся та складності роботи.',
   },
   {
     id: '3',
-    question: 'Aké platobné metódy akceptujete?',
+    question: 'Чи обовʼязково попередньо записуватися?',
     answer:
-      'Akceptujeme hotovosť, platobné karty (Visa, Mastercard) aj bankový prevod. Na väčšie opravy je možné dohodnúť splátkový plán.',
+      'Рекомендуємо записуватися заздалегідь, особливо на фарбування та масаж. Для стрижки та манікюру іноді можна прийти без запису — уточніть у майстра.',
   },
   {
     id: '4',
-    question: 'Opravujete všetky značky áut?',
+    question: 'Які способи оплати ви приймаєте?',
     answer:
-      'Áno, opravujeme všetky bežné európske, japonské aj americké značky. Máme skúsenosti s vozidlami od Škody, VW, BMW, Mercedes, Toyota, Ford a mnohých ďalších.',
+      'Готівка, картка Visa/Mastercard, переказ на карту ПриватБанк / Monobank. Передоплата не потрібна.',
   },
   {
     id: '5',
-    question: 'Je diagnostika spoplatnená?',
+    question: 'Як підготуватися до фарбування?',
     answer:
-      'Základná diagnostika je spoplatnená od 30 €. Pri následnom vykonaní opravy u nás vám poplatok za diagnostiku odčítame z celkovej ceny.',
+      'Прийдіть з чистим або злегка брудним (1–2 дні) волоссям. Не фарбуйте волосся вдома за 2 тижні до візиту. На консультації майстер оцінить стан волосся і підбере оптимальну техніку.',
+  },
+  {
+    id: '6',
+    question: 'Чи є знижки для постійних клієнтів?',
+    answer:
+      'Так! Після 5-го візиту ви отримуєте картку лояльності зі знижкою 10%. Також діють акції у день народження та сезонні пропозиції — слідкуйте за нашими оновленнями.',
   },
 ];
 
@@ -347,31 +358,31 @@ export const FAQ_ITEMS: FaqItem[] = [
 // CHAT CONFIG
 // ---------------------------------------------------------------------------
 export const CHAT_CONFIG: ChatConfig = {
-  greeting: 'Dobrý deň! Som tu, aby som vám pomohol. Ako vám môžem pomôcť?',
+  greeting: 'Привіт! 💆 Я допоможу вам записатися або відповім на питання. Чим можу допомогти?',
   quickReplies: [
     {
       id: '1',
-      label: '📋 Cenník',
+      label: '💰 Прайс',
       response:
-        'Naše ceny začínajú od 30 € za diagnostiku, od 35 € za výmenu oleja a od 50 € za opravu bŕzd. Pre presnú cenovú ponuku nás kontaktujte.',
+        'Стрижка від 1000 грн · Фарбування від 3500 грн · Манікюр від 350 грн · Масаж від 1500 грн. Для точної ціни — залишіть заявку або напишіть у WhatsApp.',
     },
     {
       id: '2',
-      label: '🕐 Otváracie hodiny',
-      response: 'Sme otvorení Po–Pia od 07:30 do 17:30 a v Sobotu od 08:00 do 12:00. V nedeľu zatvorené.',
+      label: '🕐 Години роботи',
+      response: 'Ми працюємо: Пн–Пт 08:00–21:00, Сб–Нд 10:00–18:00. Записуйтеся зручним для вас часом!',
     },
     {
       id: '3',
-      label: '📍 Kde sa nachádzate?',
-      response: 'Nájdete nás na adrese Priemyselná 15, 010 01 Žilina. Sme 5 minút od diaľnice D1.',
+      label: '📍 Адреса',
+      response: 'Знаходимося за адресою: вул. Короленка, м. Дніпро. Орієнтир — уточнюйте у WhatsApp +38 093 804 7808.',
     },
     {
       id: '4',
-      label: '📅 Rezervácia',
+      label: '📅 Записатися',
       response:
-        'Rezerváciu môžete urobiť cez formulár na tejto stránke, telefonicky na +421 32 123 4567 alebo nám napíšte e-mail.',
+        'Заповніть форму запису нижче або напишіть нам у WhatsApp +38 093 804 7808. Підтвердимо час протягом 15 хвилин!',
     },
   ],
   fallbackResponse:
-    'Ďakujeme za správu! Pre rýchlejšiu odpoveď nás kontaktujte telefonicky na +421 32 123 4567 alebo e-mailom na info@autofix.sk.',
+    'Дякуємо за повідомлення! Для швидшої відповіді напишіть нам у WhatsApp: +38 093 804 7808 або на email oksana1492@i.ua.',
 };
